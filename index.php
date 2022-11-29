@@ -13,7 +13,7 @@
     PHP curl call unsplash api
     **/
     $curl = curl_init();
-    $client_id = 'MS0CnoauAawhEWFlpoqKwzJI-AjP39bwB4m1ohsprb4';
+    $client_id = 'smnGpQlrp9sC17-OtWZrOW4ZTDrty8gzWt5zE6rRlfs';
     $query = 'cats';
     $url = "https://api.unsplash.com/search/photos?query='.$query.'&per_page=12&page=1&client_id=".$client_id;
     curl_setopt_array($curl, array(
