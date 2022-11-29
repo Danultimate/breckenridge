@@ -14,8 +14,8 @@
     display: grid;
     grid-template-columns: repeat(3, calc(33.33% - 14px));
     grid-gap: 20px;
-    padding: 40px 190px;
-    max-width: 95%;
+    padding: 40px 20px;
+    max-width: 80%;
     margin: 0 auto;
 }
 
