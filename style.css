@@ -1,0 +1,85 @@
+* {
+    margin: ;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.title {
+    text-align: center;
+    padding-top: 50px;
+
+}
+
+.unsplash-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, calc(33.33% - 14px));
+    grid-gap: 20px;
+    padding: 40px 190px;
+    max-width: 95%;
+    margin: 0 auto;
+}
+
+.unsplash-gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 1;
+}
+
+.unsplash-gallery-item {
+    position: relative;
+    box-shadow: 0 0 10px -5px #606060;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.2s;
+}
+
+span.unsplash-credit {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    background-color: rgb(0 0 0 / 80%);
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 18px;
+    font-family: sans-serif;
+}
+
+.icon-img {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24px' height='24px' viewBox='0 0 24 24' style='fill: %23fff;'%3E%3Cpath d='m2.344 15.271 2 3.46a1 1 0 0 0 1.366.365l1.396-.806c.58.457 1.221.832 1.895 1.112V21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1.598a8.094 8.094 0 0 0 1.895-1.112l1.396.806c.477.275 1.091.11 1.366-.365l2-3.46a1.004 1.004 0 0 0-.365-1.366l-1.372-.793a7.683 7.683 0 0 0-.002-2.224l1.372-.793c.476-.275.641-.89.365-1.366l-2-3.46a1 1 0 0 0-1.366-.365l-1.396.806A8.034 8.034 0 0 0 15 4.598V3a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v1.598A8.094 8.094 0 0 0 7.105 5.71L5.71 4.904a.999.999 0 0 0-1.366.365l-2 3.46a1.004 1.004 0 0 0 .365 1.366l1.372.793a7.683 7.683 0 0 0 0 2.224l-1.372.793c-.476.275-.641.89-.365 1.366zM12 8c2.206 0 4 1.794 4 4s-1.794 4-4 4-4-1.794-4-4 1.794-4 4-4z'/%3E%3C/svg%3E");
+    position: absolute;
+    right: 50%;
+    bottom: 50%;
+    width: 70px;
+    height: 70px;
+    transform: translate(50%, 50%);
+    background-position: center;
+    background-size: 60px;
+    background-repeat: no-repeat;
+    background-color: #000;
+    border-radius: 60px;
+    transition: 0.2s;
+    opacity: 0;
+}
+
+.unsplash-gallery-item:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    z-index: 99;
+}
+
+.unsplash-gallery-item:hover .icon-img {
+    opacity: 1;
+}
+@media (min-width:768px) and (max-width:1024px) {
+    .unsplash-gallery {
+        grid-template-columns: repeat(2, calc(50% - 10px));
+        width: 100%;
+    }
+}
+@media (max-width:767px) {
+    .unsplash-gallery {
+        grid-template-columns: 100%;
+        width: 100%;
+    }
+}
